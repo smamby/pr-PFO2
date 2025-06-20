@@ -47,8 +47,8 @@ Ventajas de usar SQLite en este proyecto.
 Es una base de datos ultra liviana, que o require configuracion, ideal para pequeños proyectos de prueba como este, no esta diseñada para produccion
 
 ## Capturas de pantalla
-![Inicializando servidor](./capturas/init_server.jpg)
+![Inicializando servidor](./capturas/init_server.jpg)  
 
-![Demostracion de cliente](./capturas/demostracion_cliente.jpg)
+![Demostracion de cliente](./capturas/demostracion_cliente.jpg)  
 
-![Respuesta del servidor](./capturas/server_response.jpg)
+![Respuesta del servidor](./capturas/server_response.jpg)  
