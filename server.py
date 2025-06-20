@@ -48,7 +48,8 @@ def login():
 
     # user es un objeto Row de sqlite3.Row, accedemos como diccionario
     if user and check_password_hash(user['password_hash'], password):
-        return jsonify({"mensaje": "Inicio de sesión exitoso"}), 200
+        return render_template('bienvenida.html')
+        # return jsonify({"mensaje": "Inicio de sesion exitoso"}), 200
     else:
         return jsonify({"mensaje": "Credenciales inválidas"}), 401 # Unauthorized
 

@@ -25,7 +25,13 @@ def iniciar_sesion(usuario, password):
     try:
         response = requests.post(f"{BASE_URL}/login", json={"usuario": usuario, "password": password})
         response.raise_for_status()
-        print(f"\nRespuesta login: {response.json()}")
+        print(f"\nRespuesta login: {response.text}")
+        print("")
+        print("-------------------------------------------------------------")
+        
+        # 5. Obtener la página de bienvenida
+        # print("5. Obtener la página de bienvenida")
+        # obtener_bienvenida()
     except requests.exceptions.RequestException as e:
         print(f"Error al iniciar sesión: {e}")
 
@@ -36,28 +42,27 @@ if __name__ == '__main__':
     
     # 1. Registrar un usuario
     print("1. Registrar un usuario")
-    registrar_usuario("testuser2", "password123")
+    user = input("Escribe el username para registrar un nuevo usuario:  \n")
+    password = input("Escribe un password para registrar el nuevo usuario:  \n")
+    registrar_usuario(user, password)
     print("")
     print("-------------------------------------------------------------")
     
     # 2. Intentar registrar el mismo usuario (debería dar error)
     print("2. Intentar registrar el mismo usuario (debería dar error)")
-    registrar_usuario("testuser2", "password123")
+    registrar_usuario(user, password)
+    print("")
+    print("-------------------------------------------------------------")
+    
+    # 3. Iniciar sesión con credenciales incorrectas
+    print("3. Iniciar sesión con credenciales incorrectas")
+    iniciar_sesion(user, "wrongpassword")
     print("")
     print("-------------------------------------------------------------")
 
-    # 3. Iniciar sesión con el usuario
-    print("3. Iniciar sesión con el usuario")
-    iniciar_sesion("testuser2", "password123")
-    print("")
-    print("-------------------------------------------------------------")
+    # 4. Iniciar sesión con el usuario
+    print("4. Iniciar sesión con las credenciales correctas y habilitar la pagina de bienvenida")
+    iniciar_sesion(user, password)
     
-    # 4. Iniciar sesión con credenciales incorrectas
-    print("4. Iniciar sesión con credenciales incorrectas")
-    iniciar_sesion("testuser2", "wrongpassword")
-    print("")
-    print("-------------------------------------------------------------")
     
-    # 5. Obtener la página de bienvenida
-    print("5. Obtener la página de bienvenida")
-    obtener_bienvenida()
+    
