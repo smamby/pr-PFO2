@@ -50,10 +50,14 @@ curl -X POST -H "Content-Type: application/json" -d '{"usuario": "nuevo_usuario"
 
 ## Capturas de pantalla
 
+#### Inicializando servidor
 ![Inicializando servidor](./capturas/init_server.jpg)
 
+#### Demostración de cliente
 ![Demostración de cliente](./capturas/demostracion_cliente.jpg)
 
+#### Respuesta del servidor
 ![Respuesta del servidor](./capturas/server_response.jpg)
 
+#### Prueba desde la terminal
 ![Prueba desde la terminal](./capturas/prueba_desde_terminal.jpg)
