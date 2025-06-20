@@ -36,3 +36,12 @@ python client.py
 curl -X POST -H "Content-Type: application/json" -d '{"usuario": "nuevo_usuario", "password": "password_segura"}' http://127.0.0.1:5000/registro
 
 curl -X POST -H "Content-Type: application/json" -d '{"usuario": "nuevo_usuario", "password": "password_segura"}' http://127.0.0.1:5000/login
+
+
+# Respuesta Conceptuales
+
+#### ¿Por qué hashear contraseñas?
+#### Porque es una bulnerabilidad dejar contraseñas en texto plano en base de datos, a la vista de administradores y de potenciales agentes maliciosos.
+
+#### Ventajas de usar SQLite en este proyecto.
+#### Es una base de datos ultra liviana, que o require configuracion, ideal para pequeños proyectos de prueba como este, no esta diseñada para produccion
